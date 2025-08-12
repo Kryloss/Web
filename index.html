@@ -2,40 +2,27 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="theme-color" content="#000000">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Gym Planner PWA</title>
 <link rel="manifest" href="pwa/manifest.json">
-<title>Gym Planner</title>
+<meta name="theme-color" content="#000000">
 <style>
 html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
     background: #000;
-    overscroll-behavior: none;
-    touch-action: none;
+    overflow: hidden;
 }
 canvas {
     display: block;
-    width: 100vw;
-    height: 100vh;
     background: #111;
-}
-input.overlay, input[type=file] {
-    position: fixed;
-    z-index: 1000;
-    font-size: 18px;
-    padding: 4px;
-    display: none;
 }
 </style>
 </head>
 <body>
-<canvas id="app"></canvas>
-<input id="textInput" class="overlay" type="text">
-<input id="fileInput" type="file" accept="image/*">
-<script type="module" src="app.js"></script>
+<canvas id="appCanvas"></canvas>
+<script src="db.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
